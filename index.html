@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息卡片</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="title">个人信息卡片</h1>
+
+    <div class="card">
+        <!-- 头像区域 -->
+        <div class="avatar-section">
+            <img id="avatar" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDUiIGZpbGw9IiM2NjdlZWEiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIxNSIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNMzAgNzAgUTUwIDg1IDcwIDcwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiLz48L3N2Zz4=" alt="个人头像" class="avatar">
+            <input type="file" id="avatarInput" accept="image/*" class="avatar-input">
+            <button id="uploadBtn" class="upload-btn">更换头像</button>
+        </div>
+
+        <!-- 个人信息区域 -->
+        <div class="info-section">
+            <div class="field">
+                <label for="nameInput">姓名：</label>
+                <input type="text" id="nameInput" class="editable-input" placeholder="请输入您的姓名">
+            </div>
+
+            <div class="field">
+                <label for="bioInput">个人简介：</label>
+                <textarea id="bioInput" class="editable-textarea" placeholder="请输入您的个人简介"></textarea>
+            </div>
+        </div>
+
+        <!-- 显示区域 -->
+        <div class="display-section">
+            <div class="display-item">
+                <span class="label">姓名：</span>
+                <span id="nameDisplay" class="display-text">未设置</span>
+            </div>
+            <div class="display-item">
+                <span class="label">个人简介：</span>
+                <span id="bioDisplay" class="display-text">未设置</span>
+            </div>
+        </div>
+
+        <!-- 操作按钮 -->
+        <div class="action-section">
+            <button id="saveBtn" class="save-btn">保存信息</button>
+            <button id="editBtn" class="edit-btn">编辑信息</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
